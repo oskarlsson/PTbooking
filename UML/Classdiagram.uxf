@@ -1,17 +1,42 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="14.3.0">
-  <zoom_level>10</zoom_level>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>250</x>
-      <y>110</y>
-      <w>100</w>
-      <h>90</h>
-    </coordinates>
-    <panel_attributes>SimpleClass
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>500</x><y>330</y><w>250</w><h>100</h></coordinates><panel_attributes>Personal
 --
--name</panel_attributes>
-    <additional_attributes/>
-  </element>
-</diagram>
+-personal: bool
+--
++GetPersonal():
++ActivePersonal(name: string, phone: string, 
+                 email: string, personal: bool)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>160</x><y>330</y><w>240</w><h>100</h></coordinates><panel_attributes>Private user
+--
+-privateUser: bool
+--
++GetMember(): 
++Member(name: string, phone: string, 
+                 email: string, privateUser: bool)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>840</x><y>500</y><w>160</w><h>90</h></coordinates><panel_attributes>Booking
+--
+
+--
++Booking()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>320</x><y>100</y><w>270</w><h>150</h></coordinates><panel_attributes>Person
+--
+-email: string
+-phone: string
+-name: string
+--
++Person(name:string, phone:string, email: string)
++GetName():string
++GetPhone():string
++GetEmail():string
++Registration(): </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>240</y><w>180</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>160;10;160;40;10;40;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>460</x><y>240</y><w>170</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40;150;40;150;90</additional_attributes></element><element><id>UMLClass</id><coordinates><x>850</x><y>290</y><w>150</w><h>120</h></coordinates><panel_attributes>Activity
+--
+-selfTraining
+-groupTraining
+-ptTraining
+-ptConsultation
+--
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>840</x><y>110</y><w>150</w><h>90</h></coordinates><panel_attributes>Rooms
+--
+
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>910</x><y>190</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>UMLNote</id><coordinates><x>460</x><y>60</y><w>130</w><h>40</h></coordinates><panel_attributes>Basklass/Superklass</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>680</x><y>300</y><w>70</w><h>30</h></coordinates><panel_attributes>Subklass</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>160</x><y>300</y><w>70</w><h>30</h></coordinates><panel_attributes>Subklass</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1100</x><y>280</y><w>100</w><h>90</h></coordinates><panel_attributes>Machines
+--
+
+--</panel_attributes><additional_attributes></additional_attributes></element></diagram>
