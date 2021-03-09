@@ -10,7 +10,11 @@ namespace PTbooking
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World");
+            Activities Action = new Activities();
+
+            Console.WriteLine(Action.selfTraining);
+
+            Console.ReadKey();
         }
     }
 }
