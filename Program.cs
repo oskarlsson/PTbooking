@@ -10,8 +10,10 @@ namespace PTbooking
     {
         static void Main(string[] args)
         {
-            Person menu = new Person();
+            Menu menu = new Menu();
             menu.Registration();
+            
+            
         }
     }
 }
