@@ -12,6 +12,7 @@ namespace PTbooking
         //On startup of site/program
         public void MainMenu()
         {
+            Activities AM = new Activities();
             bool run = true;
             //First screen that appears
             Console.WriteLine("---Welcome to your Training Center!---");
@@ -23,16 +24,18 @@ namespace PTbooking
                 if (MemberList.ContainsKey(Name) || WorkerList.ContainsKey(Name))
                 {
                     //Method if you are already a worker/member
-                    //Activities.MenuMethod();
-                    
-                    
+                    ActivityMenu();
+
+
+
                 }
                 else
                 {
                     //Register user
                     RegisterUser(Name);
                 }
-            }            
+            }
+            
         }
 
         public void RegisterUser(string Name)
@@ -59,6 +62,22 @@ namespace PTbooking
         //Activity menu Worker/Member
         public void ActivityMenu()
         {
+            Activities AM = new Activities();
+            string userInput;
+            if (Member == "Member")
+            {
+                Console.WriteLine("1. Self training\n2. Group training\n3. PT training\n4. PT consultation");
+                userInput = Console.ReadLine();
+                if(userInput == "1")
+                {
+                    AM.addToSelfTraining(Name);
+                }
+            }
+            else if (Member == "Worker")
+            {
+
+            }
+            
 
         }
     }     

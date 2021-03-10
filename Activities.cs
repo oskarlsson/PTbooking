@@ -5,60 +5,74 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace PTbooking
-{   
+{
 
-    public class Activities //:Person;
+    class Activities : Person
     {
-        public string selfTraining;
-        public int selfTrainingMaxSize;
-        public string groupTraining;
-        public int groupTrainingMaxSize;
-        public string ptTraining;
-        public int ptTrainingMaxSize;
-        public string ptConsultation;
-        public int ptConsultationMaxSize;
+        //public string selfTraining;
+        //public int selfTrainingMaxSize;
+        //public string groupTraining;
+        //public int groupTrainingMaxSize;
+        //public string ptTraining;
+        //public int ptTrainingMaxSize;
+        //public string ptConsultation;
+        //public int ptConsultationMaxSize;
 
-        private List<Person> selfTraining = new List<Person>();
+        private readonly List<string> selfTrainingList = new List<string>();
         private const int selfTrainingMaxSize = 10;
-        
-        public bool addToSelfTraining(Person p) {
-            if(selfTraining.Count >= selfTrainingMaxSize) {
+
+        public bool addToSelfTraining(string name)
+        {
+            if (selfTrainingList.Count >= selfTrainingMaxSize)
+            {
                 return false;
             }
-            selfTraining.Add(p);
-            return true;
+            else
+            {
+                selfTrainingList.Add(name);
+                Console.WriteLine(string.Join(", ", selfTrainingList));                
+                return true;
+            }
+            
         }
 
-        private List<Person> groupTraining = new List<Person>();
+        private List<string> groupTrainingList = new List<string>();
         private const int groupTrainingMaxSize = 6;
-        
-        public bool addToGroupTraining(Person p) {
-            if(groupTraining.Count >= groupTrainingMaxSize) {
+
+        public bool addToGroupTraining(string name)
+        {
+            if (groupTrainingList.Count >= groupTrainingMaxSize)
+            {
                 return false;
             }
-            groupTraining.Add(p);
+            groupTrainingList.Add(Name);
             return true;
         }
 
-        private List<Person> ptTraining = new List<Person>();
+        private List<string> ptTrainingList = new List<string>();
         private const int ptTrainingMaxSize = 5;
-        
-        public bool addToPtTraining(Person p) {
-            if(ptTraining.Count >= ptTrainingMaxSize) {
+
+        public bool addToPtTraining(string name)
+        {
+            if (ptTrainingList.Count >= ptTrainingMaxSize)
+            {
                 return false;
             }
-            ptTraining.Add(p);
+            ptTrainingList.Add(Name);
             return true;
         }
 
-        private List<Person> ptConsultation = new List<Person>();
+        private List<string> ptConsultationList = new List<string>();
         private const int ptConsultationMaxSize = 3;
-        
-        public bool addToPtConsultation(Person p) {
-            if(ptConsultation.Count >= ptConsultationMaxSize) {
+
+        public bool addToPtConsultation(string name)
+        {
+            if (ptConsultationList.Count >= ptConsultationMaxSize)
+            {
                 return false;
             }
-            ptConsultation.Add(p);
+            ptConsultationList.Add(Name);
             return true;
         }
+    }
 }
