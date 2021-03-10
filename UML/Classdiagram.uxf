@@ -10,13 +10,11 @@
       <h>100</h>
     </coordinates>
     <panel_attributes>Personal
-
 --
 -personal: bool
 --
 +GetPersonal():
 +ActivePersonal(name: string, phone: string, 
-
                  email: string, personal: bool)</panel_attributes>
     <additional_attributes/>
   </element>
@@ -29,13 +27,11 @@
       <h>100</h>
     </coordinates>
     <panel_attributes>Private user
-
 --
 -privateUser: bool
 --
 +GetMember(): 
 +Member(name: string, phone: string, 
-
                  email: string, privateUser: bool)</panel_attributes>
     <additional_attributes/>
   </element>
@@ -72,7 +68,6 @@
 +GetName():string
 +GetPhone():string
 +GetEmail():string
-
 +Registration(): </panel_attributes>
     <additional_attributes/>
   </element>
@@ -107,7 +102,6 @@
       <h>120</h>
     </coordinates>
     <panel_attributes>Activity
-
 --
 -selfTraining
 -groupTraining
