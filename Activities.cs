@@ -30,7 +30,7 @@ namespace PTbooking
         }
 
         private List<Person> groupTraining = new List<Person>();
-        private const int selfTrainingMaxSize = 6;
+        private const int groupTrainingMaxSize = 6;
         
         public bool addToGroupTraining(Person p) {
             if(groupTraining.Count >= groupTrainingMaxSize) {
