@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 namespace PTbooking
 {
     class Menu
-    {
-        Person p1 = new Person();
+    {       
+        Person p1 = new Person();        
         //On startup of site/program
         public void Registration()
         {
@@ -42,15 +42,19 @@ namespace PTbooking
                     //Split user into member or worker - list
                     if (aMember == "1")
                     {
-                        p1.Member = "Member";
+                        aMember = "Member";
                         p1.MemberList.Add(aName, new Tuple<string, string, string>(aPhone, aEmail, aMember));
                     }
-                    else if (p1.Member == "2")
+                    else if (aMember == "2")
                     {
-                        p1.Member = "Worker";
+                        aMember = "Worker";
                         p1.WorkerList.Add(aName, new Tuple<string, string, string>(aPhone, aEmail, aMember));
                     }
                 }
+                Console.WriteLine("Workers");
+                p1.PrintWorkers();
+                Console.WriteLine("Members");
+                p1.PrintMembers();
             }            
         }
     }
