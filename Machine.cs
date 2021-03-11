@@ -11,7 +11,7 @@ namespace PTbooking
         public string Name;
         public int MachineID;
         public bool Broken;
-        public readonly List<Machine> Machines = new List<Machine>();
+        public List<Machine> Machines = new List<Machine>();
         public readonly List<Machine> BrokenMachines = new List<Machine>();
 
         public Machine()

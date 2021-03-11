@@ -9,10 +9,12 @@ namespace PTbooking
     class Menu : Person
     {
         public Activities AM;
+        public Machine Machine;
+        public StaffActivities SAM;
         //On startup of site/program
         public void MainMenu()
         {
-            AM = new Activities();
+
             bool run = true;
             //First screen that appears
             Console.WriteLine("---Welcome to your Training Center!---");
@@ -60,11 +62,9 @@ namespace PTbooking
                 WorkerList.Add(Name, new Tuple<string, string, string>(Phone, Email, Member));
             }
         }
-        //public List<string> selfTrainingList = new List<string>();
         //Activity menu Worker/Member
         public void ActivityMenu(string Name)
         {
-            //Activities AM = new Activities();
             string userInput;
             if (Member == "Member")
             {
@@ -72,24 +72,51 @@ namespace PTbooking
                 userInput = Console.ReadLine();
                 if(userInput == "1")
                 {
-                    AM.addToSelfTraining(Name);
+                    AM.AddToSelfTraining(Name);
                 }
                 else if(userInput == "2")
                 {
-                    AM.addToGroupTraining(Name);
+                    AM.AddToGroupTraining(Name);
                 }
                 else if (userInput == "3")
                 {
-                    AM.addToPtTraining(Name);
+                    AM.AddToPtTraining(Name);
                 }
                 else if (userInput == "4")
                 {
-                    AM.addToPtConsultation(Name);
+                    AM.AddToPtConsultation(Name);
                 }
             }
             else if (Member == "Worker")
             {
-                Console.WriteLine();
+
+                Console.WriteLine("1. Change schedule\n2. Reserve rooms\n3. Add activity\n" +
+                "4. Create booking schedule\n5. Register machine\n6. Report broken machine ");
+                userInput = Console.ReadLine();
+                if (userInput == "1")
+                {
+                    SAM.ChangeSchedule();
+                }
+                else if (userInput == "2")
+                {
+                    SAM.ReserveRoom();
+                }
+                else if (userInput == "3")
+                {
+                    SAM.CreateBookingSchedule();
+                }
+                else if (userInput == "4")
+                {
+                    //Add activity method
+                }
+                else if (userInput == "5")
+                {
+                    Machine.RegisterMachines();
+                }
+                else if (userInput == "6")
+                {
+                    Machine.ChangeMachineStatus();
+                }
             }
             
 
