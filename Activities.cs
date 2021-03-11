@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace PTbooking
 {
-
-    class Activities : Person
+    class Activities : Menu
     {
         //public string selfTraining;
         //public int selfTrainingMaxSize;
@@ -18,22 +17,23 @@ namespace PTbooking
         //public string ptConsultation;
         //public int ptConsultationMaxSize;
 
-        private readonly List<string> selfTrainingList = new List<string>();
-        private const int selfTrainingMaxSize = 10;
+        public List<string> selfTrainingList = new List<string>();
+        private const int selfTrainingMaxSize = 2;
 
         public bool addToSelfTraining(string name)
         {
             if (selfTrainingList.Count >= selfTrainingMaxSize)
             {
+                Console.WriteLine("Fully booked");
                 return false;
             }
             else
             {
                 selfTrainingList.Add(name);
-                Console.WriteLine(string.Join(", ", selfTrainingList));                
+                Console.WriteLine("Booked for selftraining");
+                Console.WriteLine(string.Join(", ", selfTrainingList));
                 return true;
-            }
-            
+            }  
         }
 
         private List<string> groupTrainingList = new List<string>();
@@ -45,7 +45,8 @@ namespace PTbooking
             {
                 return false;
             }
-            groupTrainingList.Add(Name);
+            groupTrainingList.Add(name);
+            Console.WriteLine(string.Join(", ", groupTrainingList));
             return true;
         }
 
@@ -58,7 +59,8 @@ namespace PTbooking
             {
                 return false;
             }
-            ptTrainingList.Add(Name);
+            ptTrainingList.Add(name);
+            Console.WriteLine(string.Join(", ", ptTrainingList));
             return true;
         }
 
@@ -71,7 +73,8 @@ namespace PTbooking
             {
                 return false;
             }
-            ptConsultationList.Add(Name);
+            ptConsultationList.Add(name);
+            Console.WriteLine(string.Join(", ", ptConsultationList));
             return true;
         }
     }
