@@ -11,9 +11,9 @@ namespace PTbooking
         public string Name;
         public int MachineID;
         public bool Broken;
+        //Use readonly to instantiate the lists once
         public readonly List<Machine> Machines = new List<Machine>();
         public readonly List<Machine> BrokenMachines = new List<Machine>();
-
         public Machine()
         {
         }
@@ -29,39 +29,48 @@ namespace PTbooking
         {
             int counter = 0;
             Console.WriteLine("How Many machines is there in your gym?: ");
-            int antal = int.Parse(Console.ReadLine());
-            for (int i = 0; i < antal; i++)
+            while (true)
             {
-                Console.WriteLine("Name the type of machine: ");
-                string ord = Console.ReadLine();
-                bool status = false;
-                counter = counter + 1;
-                Machines.Add(new Machine(ord, counter, status));
+                string input = Console.ReadLine();
+                try
+                {
+                    int num = int.Parse(input);
+                    for (int i = 0; i < num; i++)
+                    {
+                        Console.WriteLine("Name the type of machine: ");
+                        string machinetype = Console.ReadLine();
+                        bool status = false;
+                        counter = counter + 1;
+                        Machines.Add(new Machine(machinetype, counter, status));
+                    }
+                }
+                catch
+                {
+                    Console.WriteLine("Enter valid number");
+                    continue;
+                }               
+                break;
             }
-
-
         }
-
-
         public void PrintAvailMachines()
         {
             Console.WriteLine("Avalible");
-            foreach (var mask in Machines)
+            foreach (var machine in Machines)
             {
-                if (mask.Broken == false)
-                    Console.WriteLine("ID: {0} Machine: {1} Broken: {2}", mask.MachineID, mask.Name, mask.Broken);
+                if (machine.Broken == false)
+                    Console.WriteLine("ID: {0} Machine: {1} Broken: {2}", machine.MachineID, machine.Name, machine.Broken);
             }
         }
 
         public void PrintBrokenMachines()
         {
             Console.WriteLine("Unavalible");
-            foreach (var mask in BrokenMachines)
+            foreach (var machine in BrokenMachines)
             {
-                if (mask.Broken == true)
+                if (machine.Broken == true)
                 {
 
-                    Console.WriteLine("ID: {0} Machine: {1} Broken: {2}", mask.MachineID, mask.Name, mask.Broken);
+                    Console.WriteLine("ID: {0} Machine: {1} Broken: {2}", machine.MachineID, machine.Name, machine.Broken);
                 }
 
                 else
@@ -75,7 +84,7 @@ namespace PTbooking
         {
             if (Machines == null)
             {
-                Console.WriteLine("Här var det tomt");
+                Console.WriteLine("Empty");
             }
             else
             {
