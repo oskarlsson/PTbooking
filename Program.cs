@@ -11,6 +11,7 @@ namespace PTbooking
         static void Main(string[] args)
         {
             //init program
+            //If we had more time, MainMenu funtion is supposed to be created here
             Menu menu = new Menu();
             menu.MainMenu();            
         }
