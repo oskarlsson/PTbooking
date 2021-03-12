@@ -47,10 +47,10 @@
 -ptConsultationList: &lt;string, List&gt;
 
 --
-+addToSelfTraining(name:string):bool
-+addToGroupTraining(name:string):bool
-+addToPtTraining(name:string):bool
-+addToPtConsultation(name:string):bool
++AddToSelfTraining(name:string):bool
++AddToGroupTraining(name:string):bool
++AddToPtTraining(name:string):bool
++AddToPtConsultation(name:string):bool
 
 </panel_attributes>
     <additional_attributes/>
