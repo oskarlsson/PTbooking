@@ -8,12 +8,12 @@ namespace PTbooking
 {
     class Machine
     {
-        public string Name;
-        public int MachineID;
-        public bool Broken;
+        private string Name;
+        private int MachineID;
+        private bool Broken;
         //Use readonly to instantiate the lists once
-        public readonly List<Machine> Machines = new List<Machine>();
-        public readonly List<Machine> BrokenMachines = new List<Machine>();
+        private readonly List<Machine> Machines = new List<Machine>();
+        private readonly List<Machine> BrokenMachines = new List<Machine>();
         public Machine()
         {
         }
@@ -23,11 +23,9 @@ namespace PTbooking
             this.MachineID = MachineID;
             this.Broken = Status;
         }
-
-
         public void RegisterMachines()
         {
-            int counter = 0;
+            int id = 0;
             Console.WriteLine("How Many machines is there in your gym?: ");
             while (true)
             {
@@ -40,8 +38,8 @@ namespace PTbooking
                         Console.WriteLine("Name the type of machine: ");
                         string machinetype = Console.ReadLine();
                         bool status = false;
-                        counter = counter + 1;
-                        Machines.Add(new Machine(machinetype, counter, status));
+                        id = id + 1;
+                        Machines.Add(new Machine(machinetype, id, status));
                     }
                 }
                 catch
@@ -61,7 +59,6 @@ namespace PTbooking
                     Console.WriteLine("ID: {0} Machine: {1} Broken: {2}", machine.MachineID, machine.Name, machine.Broken);
             }
         }
-
         public void PrintBrokenMachines()
         {
             Console.WriteLine("Unavalible");
@@ -72,14 +69,12 @@ namespace PTbooking
 
                     Console.WriteLine("ID: {0} Machine: {1} Broken: {2}", machine.MachineID, machine.Name, machine.Broken);
                 }
-
                 else
                 {
                     Console.WriteLine("här var det tomt");
                 }
             }
         }
-
         public void ChangeMachineStatus()
         {
             if (Machines == null)
@@ -98,8 +93,6 @@ namespace PTbooking
                     i.Broken = true;
                 }
             }
-
-
         }
     }
 }
