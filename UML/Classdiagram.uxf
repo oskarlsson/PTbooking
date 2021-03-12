@@ -1,194 +1,64 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="14.3.0">
-  <zoom_level>10</zoom_level>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>500</x>
-      <y>330</y>
-      <w>250</w>
-      <h>100</h>
-    </coordinates>
-    <panel_attributes>Personal
-
---
--personal: bool
---
-+GetPersonal():
-+ActivePersonal(name: string, phone: string, 
-
-                 email: string, personal: bool)</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>160</x>
-      <y>330</y>
-      <w>310</w>
-      <h>100</h>
-    </coordinates>
-    <panel_attributes>Private user
-
---
--privateUser: bool
---
-+GetMember(): 
-+Member(name: string, phone: string, 
-
-                 email: string, privateUser: bool)</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>840</x>
-      <y>500</y>
-      <w>160</w>
-      <h>90</h>
-    </coordinates>
-    <panel_attributes>Booking
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>734</x><y>195</y><w>160</w><h>90</h></coordinates><panel_attributes>Booking
 --
 
 --
-+Booking()</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>320</x>
-      <y>100</y>
-      <w>270</w>
-      <h>160</h>
-    </coordinates>
-    <panel_attributes>Person
++Booking()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>144</x><y>85</y><w>360</w><h>220</h></coordinates><panel_attributes>Person
 --
--email: string
--phone: string
--name: string
---
-+Person(name:string, phone:string, email: string)
-+GetName():string
-+GetPhone():string
-+GetEmail():string
-
-+Registration(): </panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>290</x>
-      <y>250</y>
-      <w>180</w>
-      <h>100</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>160.0;10.0;160.0;30.0;10.0;30.0;10.0;80.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>460</x>
-      <y>250</y>
-      <w>170</w>
-      <h>100</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;30.0;150.0;30.0;150.0;80.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>850</x>
-      <y>290</y>
-      <w>150</w>
-      <h>120</h>
-    </coordinates>
-    <panel_attributes>Activity
++Email:string
++Phone:string
++Name:string
++Member:string
++MemberList:&lt;Dictionary&gt;&lt;string, Tuple&gt;
++WorkerList:&lt;Dictionary&gt;&lt;string, Tuple&gt;
 
 --
--selfTraining
--groupTraining
--ptTraining
--ptConsultation
++Person()
++Person(name:string, phone:string, email: string, member:string)
++PrintMembers():void
++PrintWorkers():void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>44</x><y>575</y><w>280</w><h>250</h></coordinates><panel_attributes>Activities : Menu
+--
+-selfTrainingMaxSize:int
+-groupTrainingMaxSize:int
+-ptTrainingMaxSize:int
+-ptConsultationMaxSize:int
+
+-selfTrainingList:&lt;List&gt;
+-groupTrainingList:&lt;List&gt;
+-ptTrainingList:&lt;List&gt;
+-ptConsultationList:&lt;List&gt;
+
+--
++addToSelfTraining(name:string):bool
++addToGroupTraining(name:string):bool
++addToPtTraining(name:string):bool
++addToPtConsultation(name:string):bool
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>734</x><y>85</y><w>150</w><h>90</h></coordinates><panel_attributes>Rooms
 --
 
-
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>840</x>
-      <y>110</y>
-      <w>150</w>
-      <h>90</h>
-    </coordinates>
-    <panel_attributes>Rooms
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>364</x><y>45</y><w>140</w><h>40</h></coordinates><panel_attributes>Baseclass/Superclass</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>394</x><y>425</y><w>320</w><h>240</h></coordinates><panel_attributes>Machine
 --
++Name:string
++MachineID:int
++Broken:bool
++Machines:&lt;List&gt;
++BrokenMachines:&lt;List&gt;
 
---</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>910</x>
-      <y>190</y>
-      <w>30</w>
-      <h>120</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLNote</id>
-    <coordinates>
-      <x>460</x>
-      <y>60</y>
-      <w>130</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>Basklass/Superklass</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLNote</id>
-    <coordinates>
-      <x>680</x>
-      <y>300</y>
-      <w>70</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>Subklass</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLNote</id>
-    <coordinates>
-      <x>160</x>
-      <y>300</y>
-      <w>70</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>Subklass</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1100</x>
-      <y>280</y>
-      <w>100</w>
-      <h>90</h>
-    </coordinates>
-    <panel_attributes>Machines
 --
-
---</panel_attributes>
-    <additional_attributes/>
-  </element>
-</diagram>
++Machine()
++Machine(Name:string, MachineID:int, Status:bool)
++RegisterMachines():void
++PrintAllMachines():void
++PrintAvailMachines():void
++PrintBrokenMachines():void
++ChangeMachineStatus():void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>44</x><y>415</y><w>200</w><h>90</h></coordinates><panel_attributes>Menu : Person
+--
++MainMenu():void
++RegisterUser(name:string): void
++ActivityMenu():void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>133</x><y>295</y><w>200</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;-
+&lt;&lt;inherits&gt;&gt;</panel_attributes><additional_attributes>180;10;180;80;10;80;10;120</additional_attributes></element><element><id>UMLNote</id><coordinates><x>44</x><y>385</y><w>80</w><h>30</h></coordinates><panel_attributes>Subclass</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>143</x><y>25</y><w>160</w><h>60</h></coordinates><panel_attributes>Note..
+String variables properties 
+are both get/set</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>123</x><y>495</y><w>80</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-
+&lt;&lt;inherits&gt;&gt;</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>UMLNote</id><coordinates><x>44</x><y>545</y><w>80</w><h>30</h></coordinates><panel_attributes>Subclass</panel_attributes><additional_attributes></additional_attributes></element></diagram>
