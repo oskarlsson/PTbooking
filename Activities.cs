@@ -8,16 +8,9 @@ namespace PTbooking
 {
 
     class Activities : Person
-    {
-        //public string selfTraining;
-        //public int selfTrainingMaxSize;
-        //public string groupTraining;
-        //public int groupTrainingMaxSize;
-        //public string ptTraining;
-        //public int ptTrainingMaxSize;
-        //public string ptConsultation;
-        //public int ptConsultationMaxSize;
-
+    {   // each activity created as a list
+        // each list has limited places >name+MaxSize<
+        // when one of the lists is selected by the members the places available will be less by 1
         private readonly List<string> selfTrainingList = new List<string>();
         private const int selfTrainingMaxSize = 10;
 
