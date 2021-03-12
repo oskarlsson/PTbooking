@@ -71,24 +71,24 @@ namespace PTbooking
                 userInput = Console.ReadLine();
                 if(userInput == "1")
                 {
-                    AM.addToSelfTraining(Name);
+                    AM.AddToSelfTraining(Name);
                 }
                 else if(userInput == "2")
                 {
-                    AM.addToGroupTraining(Name);
+                    AM.AddToGroupTraining(Name);
                 }
                 else if (userInput == "3")
                 {
-                    AM.addToPtTraining(Name);
+                    AM.AddToPtTraining(Name);
                 }
                 else if (userInput == "4")
                 {
-                    AM.addToPtConsultation(Name);
+                    AM.AddToPtConsultation(Name);
                 }
             }
             else if (Member == "Staff")
             {
-                
+               
                 Console.WriteLine("1. Register machines\n2. Report broken machines\n3. Show avalible machines\n4. Show broken machines");
                 userInput = Console.ReadLine();
                 switch (userInput)
@@ -106,16 +106,8 @@ namespace PTbooking
                     case "4":
                         machines.PrintBrokenMachines();
                         break;
-                }
-                
-                
-                
-                
-                
-                
-            }
-            
-
+                }             
+            }           
         }
     }     
 }

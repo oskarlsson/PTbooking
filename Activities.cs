@@ -9,13 +9,12 @@ namespace PTbooking
 
     class Activities
     {
-
         // each activity created as a list
         // each list has limited places >name+MaxSize<
         // when one of the lists is selected by the members the places available will be less by 1
         public List<string> selfTrainingList = new List<string>();
         private const int selfTrainingMaxSize = 2;
-        public bool addToSelfTraining(string name)
+        public bool AddToSelfTraining(string name)
         {
             if (selfTrainingList.Count >= selfTrainingMaxSize)
             {
@@ -34,7 +33,7 @@ namespace PTbooking
         private List<string> groupTrainingList = new List<string>();
         private const int groupTrainingMaxSize = 6;
 
-        public bool addToGroupTraining(string name)
+        public bool AddToGroupTraining(string name)
         {
             if (groupTrainingList.Count >= groupTrainingMaxSize)
             {
@@ -48,7 +47,7 @@ namespace PTbooking
         private List<string> ptTrainingList = new List<string>();
         private const int ptTrainingMaxSize = 5;
 
-        public bool addToPtTraining(string name)
+        public bool AddToPtTraining(string name)
         {
             if (ptTrainingList.Count >= ptTrainingMaxSize)
             {
@@ -62,7 +61,7 @@ namespace PTbooking
         private List<string> ptConsultationList = new List<string>();
         private const int ptConsultationMaxSize = 3;
 
-        public bool addToPtConsultation(string name)
+        public bool AddToPtConsultation(string name)
         {
             if (ptConsultationList.Count >= ptConsultationMaxSize)
             {
