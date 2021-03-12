@@ -11,7 +11,7 @@ namespace PTbooking
         private string Name;
         private int MachineID;
         private bool Broken;
-        //Use readonly to instantiate the lists once
+        //Use readonly to init the lists only once.
         private readonly List<Machine> Machines = new List<Machine>();
         private readonly List<Machine> BrokenMachines = new List<Machine>();
         public Machine()
@@ -23,6 +23,7 @@ namespace PTbooking
             this.MachineID = MachineID;
             this.Broken = Status;
         }
+        //Register new machines and add to list.
         public void RegisterMachines()
         {
             int id = 0;
@@ -50,31 +51,25 @@ namespace PTbooking
                 break;
             }
         }
+        //Prints out list of machines that are not broken.
         public void PrintAvailMachines()
         {
             Console.WriteLine("Avalible");
             foreach (var machine in Machines)
             {
-                if (machine.Broken == false)
-                    Console.WriteLine("ID: {0} Machine: {1} Broken: {2}", machine.MachineID, machine.Name, machine.Broken);
+                    Console.WriteLine("ID: {0}, Machine: {1}, Broken: {2}", machine.MachineID, machine.Name, machine.Broken);
             }
         }
+        //Prints out list of broken machines.
         public void PrintBrokenMachines()
         {
             Console.WriteLine("Unavalible");
             foreach (var machine in BrokenMachines)
             {
-                if (machine.Broken == true)
-                {
-
-                    Console.WriteLine("ID: {0} Machine: {1} Broken: {2}", machine.MachineID, machine.Name, machine.Broken);
-                }
-                else
-                {
-                    Console.WriteLine("här var det tomt");
-                }
+                    Console.WriteLine("ID: {0}, Machine: {1}, Broken: {2}", machine.MachineID, machine.Name, machine.Broken);
             }
         }
+        //Move machines from avalible machines list to broken machines list.
         public void ChangeMachineStatus()
         {
             if (Machines == null)

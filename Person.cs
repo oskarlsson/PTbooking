@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PTbooking
 {
-    class Person //: Activities
+    class Person
     {
         //Properties
         public string Name { get; set; }
@@ -16,7 +16,6 @@ namespace PTbooking
         //Lists for all users on the program
         public Dictionary<string, Tuple<string, string, string>> MemberList = new Dictionary<string, Tuple<string, string, string>>();
         public Dictionary<string, Tuple<string, string, string>> WorkerList = new Dictionary<string, Tuple<string, string, string>>();
-
 
         //Defaultconstructor
         public Person()

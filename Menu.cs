@@ -61,11 +61,9 @@ namespace PTbooking
                 WorkerList.Add(Name, new Tuple<string, string, string>(Phone, Email, Member));
             }
         }
-        //public List<string> selfTrainingList = new List<string>();
         //Activity menu Worker/Member
         public void ActivityMenu(string Name)
         {
-            //Activities AM = new Activities();
             string userInput;
             if (Member == "Member")
             {
@@ -98,9 +96,9 @@ namespace PTbooking
                     case "1":
                         machines.RegisterMachines();
                         break;
-                    case "2":                       
-                        machines.ChangeMachineStatus();
+                    case "2":
                         machines.PrintAvailMachines();
+                        machines.ChangeMachineStatus();
                         break;
                     case "3":
                         machines.PrintAvailMachines();

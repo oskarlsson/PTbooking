@@ -10,10 +10,9 @@ namespace PTbooking
     {
         static void Main(string[] args)
         {
+            //init program
             Menu menu = new Menu();
-            menu.MainMenu();
-            
-            
+            menu.MainMenu();            
         }
     }
 }

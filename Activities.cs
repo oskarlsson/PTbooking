@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace PTbooking
 {
 
-    class Activities : Menu
+    class Activities
     {
 
         // each activity created as a list

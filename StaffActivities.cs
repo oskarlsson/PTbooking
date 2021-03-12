@@ -53,10 +53,10 @@ namespace PTbooking
                 //ask which activite the staff wants to add
                 //ask if the staff is sure from what they wrote
                 //the activity added will go to the members activities menu to be selected from the members
-            }
+             }
             catch (Exception e)
              {
-                    //  msg in case something went wrong
+                //msg in case something went wrong
              }
         }
 
@@ -68,7 +68,5 @@ namespace PTbooking
             //can be shown in the table when the member is booked
             //in case of ChangeSchedule >>> shows in the datatable aswell
         }
-
-    }
-    
+    }  
 }
