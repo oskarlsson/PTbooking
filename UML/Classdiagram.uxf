@@ -1,8 +1,15 @@
-<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>734</x><y>195</y><w>160</w><h>90</h></coordinates><panel_attributes>Booking
---
-
---
-+Booking()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>144</x><y>85</y><w>360</w><h>220</h></coordinates><panel_attributes>Person
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>460</x>
+      <y>150</y>
+      <w>360</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>Person
 --
 +Email:string
 +Phone:string
@@ -16,7 +23,18 @@
 +Person(name:string, phone:string, email: string, member:string)
 +PrintMembers():void
 +PrintWorkers():void
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>44</x><y>575</y><w>280</w><h>250</h></coordinates><panel_attributes>Activities : Menu
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>720</x>
+      <y>500</y>
+      <w>280</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>Activities : Menu
 --
 -selfTrainingMaxSize:int
 -groupTrainingMaxSize:int
@@ -34,10 +52,29 @@
 +addToPtTraining(name:string):bool
 +addToPtConsultation(name:string):bool
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>734</x><y>85</y><w>150</w><h>90</h></coordinates><panel_attributes>Rooms
---
-
---</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>364</x><y>45</y><w>140</w><h>40</h></coordinates><panel_attributes>Baseclass/Superclass</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>394</x><y>425</y><w>320</w><h>240</h></coordinates><panel_attributes>Machine
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>670</x>
+      <y>110</y>
+      <w>150</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Baseclass/Superclass</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>310</x>
+      <y>510</y>
+      <w>320</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>Machine
 --
 +Name:string
 +MachineID:int
@@ -53,12 +90,201 @@
 +PrintAvailMachines():void
 +PrintBrokenMachines():void
 +ChangeMachineStatus():void
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>44</x><y>415</y><w>200</w><h>90</h></coordinates><panel_attributes>Menu : Person
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>910</x>
+      <y>190</y>
+      <w>220</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Menu : Person
 --
 +MainMenu():void
 +RegisterUser(name:string): void
-+ActivityMenu():void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>133</x><y>295</y><w>200</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;-
-&lt;&lt;inherits&gt;&gt;</panel_attributes><additional_attributes>180;10;180;80;10;80;10;120</additional_attributes></element><element><id>UMLNote</id><coordinates><x>44</x><y>385</y><w>80</w><h>30</h></coordinates><panel_attributes>Subclass</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>143</x><y>25</y><w>160</w><h>60</h></coordinates><panel_attributes>Note..
++ActivityMenu():void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>810</x>
+      <y>240</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>100.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>910</x>
+      <y>160</y>
+      <w>80</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Subclass</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>460</x>
+      <y>90</y>
+      <w>170</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Note..
 String variables properties 
-are both get/set</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>123</x><y>495</y><w>80</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-
-&lt;&lt;inherits&gt;&gt;</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>UMLNote</id><coordinates><x>44</x><y>545</y><w>80</w><h>30</h></coordinates><panel_attributes>Subclass</panel_attributes><additional_attributes></additional_attributes></element></diagram>
+are both get/set</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>950</x>
+      <y>270</y>
+      <w>130</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>110.0;10.0;110.0;180.0;10.0;180.0;10.0;230.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>720</x>
+      <y>470</y>
+      <w>80</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Subclass</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1080</x>
+      <y>500</y>
+      <w>210</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>StaffActivities : Menu
+--
++Schedule:&lt;List&gt;
++Room:&lt;List&gt;
+--
++ChangeSchedule():void
++ReserveRoom():void
++CreateBookingSchedule():void
++AddAcitivty():void
++InformMember():void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1080</x>
+      <y>470</y>
+      <w>80</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Subclass</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1050</x>
+      <y>270</y>
+      <w>160</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;180.0;140.0;180.0;140.0;230.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1080</x>
+      <y>650</y>
+      <w>150</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>Code for StaffActivity
+is yet to be finished</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>810</x>
+      <y>200</y>
+      <w>120</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+login &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>750</y>
+      <w>410</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>390.0;10.0;390.0;60.0;10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>640</y>
+      <w>800</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>780.0;10.0;780.0;170.0;10.0;170.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>840</x>
+      <y>270</y>
+      <w>180</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..1
+&lt; Member book </panel_attributes>
+    <additional_attributes>150.0;10.0;150.0;160.0;10.0;160.0;10.0;230.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1120</x>
+      <y>220</y>
+      <w>170</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..1
+Staff do &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;130.0;20.0;130.0;280.0</additional_attributes>
+  </element>
+</diagram>
