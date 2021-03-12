@@ -10,6 +10,7 @@ namespace PTbooking
     {
         public Activities AM;
         //On startup of site/program
+        Machine machines = new Machine();
         public void MainMenu()
         {
             AM = new Activities();
@@ -89,7 +90,31 @@ namespace PTbooking
             }
             else if (Member == "Staff")
             {
-                Console.WriteLine();
+                
+                Console.WriteLine("1. Register machines\n2. Report broken machines\n3. Show avalible machines\n4. Show broken machines");
+                userInput = Console.ReadLine();
+                switch (userInput)
+                {
+                    case "1":
+                        machines.RegisterMachines();
+                        break;
+                    case "2":                       
+                        machines.ChangeMachineStatus();
+                        machines.PrintAvailMachines();
+                        break;
+                    case "3":
+                        machines.PrintAvailMachines();
+                        break;
+                    case "4":
+                        machines.PrintBrokenMachines();
+                        break;
+                }
+                
+                
+                
+                
+                
+                
             }
             
 

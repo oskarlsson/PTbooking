@@ -30,22 +30,23 @@ namespace PTbooking
 
         }
 
-        public char ReserveRoom(char)
+        public char ReserveRoom(char c)
         {
-            Char ch;
+            char ch;
             do
             {
                 Console.Write("Do you want to reserve a room? Enter (Y/N) :-");
                 ch = Convert.ToChar(Console.ReadLine().ToUpper());
             }
-            while(ch.Equals(Char.Parse("N")));
+            while(ch.Equals(char.Parse("N")));
             //next feature if there's time
             // ask which room as well in case the rooms were numbered
             Console.WriteLine("Thanks ....The room is reserved");
             Console.ReadLine();
+            return ch;
         }
 
-        public string AddActivity()
+        public void AddActivity()
         {
              try
              {
@@ -59,7 +60,7 @@ namespace PTbooking
              }
         }
 
-        public string CreateBookingSchedule()
+        public void CreateBookingSchedule()
         {
 
             //adding columns (datatable)
