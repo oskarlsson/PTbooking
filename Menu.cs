@@ -41,7 +41,7 @@ namespace PTbooking
             Phone = Console.ReadLine();
             Console.WriteLine("Enter email: ");
             Email = Console.ReadLine();
-            Console.WriteLine("Are you a member(1) or worker(2)?: ");
+            Console.WriteLine("Are you a member(1) or staff(2)?: ");
             Member = Console.ReadLine();
             //Split user into member or worker - list
             if (Member == "1")
@@ -56,7 +56,7 @@ namespace PTbooking
             }
             else if (Member == "2")
             {
-                Member = "Worker";
+                Member = "Staff";
                 WorkerList.Add(Name, new Tuple<string, string, string>(Phone, Email, Member));
             }
         }
@@ -87,7 +87,7 @@ namespace PTbooking
                     AM.addToPtConsultation(Name);
                 }
             }
-            else if (Member == "Worker")
+            else if (Member == "Staff")
             {
                 Console.WriteLine();
             }
